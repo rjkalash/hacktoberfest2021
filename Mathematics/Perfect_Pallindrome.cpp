@@ -1,6 +1,5 @@
 //Code for Perfect palindrome number
 //Perfect Palindrome number is a number which is Palindrome as well as Perfect Square
-// example: 11 is a perfect palindrome number while 37 is not
 #include<bits/stdc++.h>
 using namespace std;
 bool isPalindrome(int n)
