@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+</head>
+<body>
+	<h1>Register</h1>
+	<form>
+		<label for="FName">First Name</label>
+		<input id="FName" type="text" name="FirstName" required>
+		<label for="LName">Last Name</label>
+		<input id="LName" type="text" name="LastName" required>
+	<br>
+		<label for="Male">Male</label>
+		<input type="radio" name="Gender">
+		<label for="Female">Female</label>
+		<input type="radio" name="Gender">
+	<br>
+		<label for="Email">Email</label>
+		<input id="Email" type="Email" required>
+		<label for="Pass">Password</label>
+		<input id="Pass" type="Password" pattern=.{5,19} required title="Between 5 to 10 charactersx">
+	<br>
+		<label for="dob">Birthday:</label>
+		<select id = "dob" >
+			<option selected disabled hidden>Month</option>
+			<option>Jan</option>
+			<option>Feb</option>
+			<option>Mar</option>
+		</select>
+		<select id = "dob" >
+			<option selected disabled hidden>Day</option>
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+		</select>
+		<select id = "dob" >
+			<option selected disabled hidden>Year</option>
+			<option>2002</option>
+			<option>2001</option>
+			<option>2000</option>
+		</select>
+	<br>
+		<label for="t&c">I agree to the terms and conditions</label>
+		<input type="checkbox">
+<br>
+		<button value="Submit">Submit</button>
+	</form>
+
+<link rel="stylesheet" type="text/css" href="app.css">
+	
+
+</body>
+</html>
