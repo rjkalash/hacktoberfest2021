@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.notes.app",
+  "applicationId": "comm.notes.app",
   "variantName": "processReleaseResources",
   "elements": [
     {
