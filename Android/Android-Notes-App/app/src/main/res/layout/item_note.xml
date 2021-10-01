@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/item_layoutNote"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_12sdp"
+    android:layout_marginTop="@dimen/_12sdp"
+    android:background="@drawable/background_note"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:translationZ="2dp"
+        android:paddingStart="@dimen/_3sdp"
+        android:paddingEnd="@dimen/_3sdp"
+        android:id="@+id/item_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEW"
+        android:background="@drawable/background_note2"
+        android:backgroundTint="#FF9100"
+        android:includeFontPadding="false"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:textSize="@dimen/_10ssp"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/item_imageNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:visibility="gone"
+        app:riv_corner_radius_top_left="@dimen/_10sdp"
+        app:riv_corner_radius_top_right="@dimen/_10sdp"/>
+
+    <TextView
+        android:layout_below="@id/item_imageNote"
+        android:id="@+id/item_textTitlem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:includeFontPadding="false"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:textSize="@dimen/_13ssp"/>
+
+    <TextView
+        android:layout_below="@+id/item_textTitlem"
+        android:id="@+id/item_textSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:includeFontPadding="false"
+        android:textColor="@color/colorNoteSubTitleText"
+        android:textSize="@dimen/_12ssp"/>
+
+    <TextView
+        android:layout_below="@+id/item_textSubTitle"
+        android:id="@+id/item_textDateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:includeFontPadding="false"
+        android:textColor="@color/colorNoteSubTitleText"
+        android:textSize="@dimen/_7ssp"
+        />
+
+</RelativeLayout>
