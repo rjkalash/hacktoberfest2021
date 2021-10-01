@@ -1,0 +1,51 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             PROGRAM,CODE,READONLY
+    2 00000000         ENTRY
+    3 00000000 E59F1004        LDR              R1, VALUE1
+    4 00000004 E0910081        ADDS             R0,R1,R1, LSL #0X01
+    5 00000008 EF000011        SWI              &11
+    6 0000000C                 AREA             PROGRAM,DATA,READONLY
+    7 0000000C 00000002 
+                       VALUE1  DCD              &00000002
+    8 00000010                 END
+Command Line: --debug --xref --diag_suppress=9931 --bi --apcs=interwork --depen
+d=.\objects\shift.d -o.\objects\shift.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\
+ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SE
+TA 525" --list=.\listings\shift.lst SHIFT.ASM
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ENTRY 00000000
+
+Symbol: ENTRY
+   Definitions
+      At line 2 in file SHIFT.ASM
+   Uses
+      None
+Comment: ENTRY unused
+PROGRAM 00000000
+
+Symbol: PROGRAM
+   Definitions
+      At line 1 in file SHIFT.ASM
+   Uses
+      None
+Comment: PROGRAM unused
+VALUE1 0000000C
+
+Symbol: VALUE1
+   Definitions
+      At line 7 in file SHIFT.ASM
+   Uses
+      At line 3 in file SHIFT.ASM
+Comment: VALUE1 used once
+3 symbols
+335 symbols in table
