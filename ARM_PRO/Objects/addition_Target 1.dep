@@ -1,0 +1,2 @@
+Dependencies for Project 'addition', Target 'Target 1': (DO NOT MODIFY !)
+F (.\addition.asm)(0x613102FD)(--cpu ARM7TDMI --bi --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 525"--list .\listings\addition.lst --xref -o .\objects\addition.o --depend .\objects\addition.d)

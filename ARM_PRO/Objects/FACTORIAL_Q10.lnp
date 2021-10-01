@@ -1,0 +1,5 @@
+--cpu ARM7TDMI
+".\objects\factorial.o"
+--ro-base 0x00000000 --entry 0x00000000 --rw-base 0x00000000 --strict --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\FACTORIAL_Q10.map" -o .\Objects\FACTORIAL_Q10.axf
