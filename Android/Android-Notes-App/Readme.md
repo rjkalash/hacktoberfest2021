@@ -11,6 +11,9 @@ A Notes App template for creating a Notes app for Android! The application is fu
 + Facebook With Banner and Interstitial Integrated
 + Android Studio Code
 
+![notes](https://user-images.githubusercontent.com/73836896/135617246-cbdd8901-6485-411a-b294-fdc233988f77.jpg)
+
+
 ## Requirements
 Latest Android Studio version is recommended, which can be downloaded from here:
 http://developer.android.com/intl/es/sdk/index.html
