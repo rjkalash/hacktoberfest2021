@@ -45,13 +45,11 @@ function loadTable(){
 }
 
 let setButtonClass = function() {
-    // TODO - change the style of the students table to table-danger
     let table = document.getElementById('studentsTable');
     table.setAttribute('class', 'table table-danger');
 }
 
 let attachEvents = function() {
-    // TODO Write code here to attach event listener to "Change table style" button
     console.error("No node written here.")
     document.getElementById('styleButton').addEventListener("click", () => console.log("Click"))
 }
