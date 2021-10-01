@@ -10,6 +10,7 @@ export function update() {
         food = getRandomFoodposition()
      }
 }
+// Keren sumpahh
 export function draw(gameBoard) {
 
     const foodElement = document.createElement('div')
