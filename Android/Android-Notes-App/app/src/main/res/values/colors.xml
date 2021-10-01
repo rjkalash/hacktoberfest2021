@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Light Mode Color-->
+    <color name="colorAccent_Light">#F50057</color>
+    <color name="background_Light">#FDFDFE</color>
+    <color name="Background_Light_S">#ECECEC</color>
+    <color name="Titele_A_Light">#161616</color>
+    <color name="Titele_AA_Light">#6D6D6D</color>
+    <color name="Boder_Light">#1A0C1318</color>
+
+    <!--Night Mode Color-->
+    <color name="colorAccent_Night">#F50057</color>
+    <color name="background_Night">#000000</color>
+    <color name="Background_Night_S">#121212</color>
+    <color name="Titele_A_Night">#DBDBDB</color>
+    <color name="Titele_AA_Night">#E9A0A0A0</color>
+    <color name="Boder_Night">#191919</color>
+
+
+
+    <color name="blue_500">#FF2196F3</color>
+    <color name="teal_200">#FDBE3B</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTextHint">#7B7B7B</color>
+    <color name="colorDefaultNoteColor">#333333</color>
+    <color name="colorNoteSubTitleText">#Fafafa</color>
+    <color name="colorNoteColor2">#fdbe3b</color>
+    <color name="colorNoteColor3">#E040FB</color>
+    <color name="colorNoteColor4">#3a52fc</color>
+    <color name="colorNoteColor5">#F50057</color>
+    <color name="colorNoteColor6">#00E676</color>
+    <color name="colorNoteColor7">#FF3D00</color>
+    <color name="colorDelete">#ff4842</color>
+
+
+    <color name="circle_lock_screen_pf">#EE5555</color>
+    <color name="background_lock_screen_pf">#663333</color>
+    <color name="code_lock_screen_pf">#000000</color>
+    <color name="white_selector_pf">#66000000</color>
+    <color name="hint_color">#42000000</color>
+    <color name="warning_color">#f4511e</color>
+    <color name="success_color">#009688</color>
+</resources>

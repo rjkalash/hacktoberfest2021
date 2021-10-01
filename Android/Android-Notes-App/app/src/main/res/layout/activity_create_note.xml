@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/BackgroundColor"
+    tools:context=".Activity.Note.CreateNoteActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_80sdp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                app:title="@string/app_name"
+                app:titleTextColor="?attr/BackgroundTint"
+                app:navigationIcon="?attr/icon_a"
+                android:id="@+id/create_toolbar_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints" />
+
+
+        <LinearLayout
+            android:background="?attr/BackgroundColor"
+            android:id="@+id/llScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true">
+
+
+                <EditText
+                    android:id="@+id/create_inputNoteTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@null"
+                    android:hint="@string/note_title"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="false"
+                    android:inputType="text"
+                    android:textStyle="bold"
+                    android:textColor="?attr/Titel_1"
+                    android:textColorHint="?attr/Titel_2"
+                    android:textSize="@dimen/_16ssp"
+                    tools:ignore="MissingConstraints" />
+
+
+                <TextView
+                    android:id="@+id/create_textDeteTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:textColor="?attr/Titel_2"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toEndOf="@id/create_inputNoteTitle"
+                    app:layout_constraintStart_toStartOf="@id/create_inputNoteTitle"
+                    app:layout_constraintTop_toBottomOf="@id/create_inputNoteTitle" />
+
+                <EditText
+                    android:id="@+id/create_inputNoteSubtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@null"
+                    android:hint="@string/note_subtitle"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="false"
+                    android:inputType="textMultiLine"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:textColor="?attr/Titel_1"
+                    android:textColorHint="?attr/Titel_2"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/create_viewSubtitleIndicator"
+                    app:layout_constraintTop_toBottomOf="@id/create_textDeteTime" />
+
+
+                <View
+                    android:id="@+id/create_viewSubtitleIndicator"
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:background="@drawable/background_subtitle_indicr"
+                    app:layout_constraintBottom_toBottomOf="@id/create_inputNoteSubtitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/create_inputNoteSubtitle" />
+
+
+                <LinearLayout
+                    android:id="@+id/create_layoutWebURL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12ssp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_12ssp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/create_inputNoteSubtitle"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        android:id="@+id/create_textWebURL"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autoLink="web"
+                        android:includeFontPadding="false"
+                        android:textSize="@dimen/_13ssp"
+                        />
+                    <ImageView
+                        android:id="@+id/create_imageRemoveWebURL"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/ic_delete"
+                        app:tint="@color/colorDelete"
+                        android:contentDescription="@string/todo" />
+
+                </LinearLayout>
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    app:riv_corner_radius="@dimen/_10sdp"
+                    android:id="@+id/create_imageNote"
+                    android:scaleType="fitStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_250sdp"
+                    android:layout_marginStart="@dimen/_12ssp"
+                    android:layout_marginTop="@dimen/_12ssp"
+                    android:layout_marginEnd="@dimen/_12ssp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/create_layoutWebURL"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:id="@+id/create_imageRemoveImage"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/backround_delate"
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/ic_delete"
+                    app:tint="@color/colorWhite"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@id/create_imageNote"
+                    app:layout_constraintTop_toTopOf="@+id/create_imageNote"
+                    android:contentDescription="@string/todo" />
+
+                <com.notes.app.view.NemosoftsText.NemosoftsEditText
+                    android:minHeight="@dimen/_200sdp"
+                    android:id="@+id/create_inputNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:paddingTop="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingStart="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingEnd="16dp"
+                    android:gravity="top|start"
+                    android:scrollbars="vertical"
+                    android:background="@android:color/transparent"
+                    app:bulletColor="@color/blue_500"
+                    app:bulletRadius="@dimen/bullet_radius"
+                    app:bulletGapWidth="@dimen/bullet_gap_width"
+                    app:historyEnable="true"
+                    app:historySize="99"
+                    android:hint="@string/type_note_here"
+                    app:linkColor="@color/blue_500"
+                    app:linkUnderline="true"
+                    app:quoteColor="@color/blue_500"
+                    app:quoteStripeWidth="@dimen/quote_stripe_width"
+                    app:quoteCapWidth="@dimen/quote_gap_width"
+                    app:layout_constraintTop_toBottomOf="@id/create_imageNote"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="@dimen/_10sdp"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:id="@+id/adView_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include layout="@layout/layout_mis"/>
+
+    <HorizontalScrollView
+        app:behavior_peekHeight="@dimen/_40sdp"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/BackgroundColor_S"
+        android:scrollbars="none">
+
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton android:id="@+id/bold"
+                android:contentDescription="@null"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_format_bold"
+                android:scaleType="center"
+                android:tint="?attr/BackgroundTint"
+                android:background="?android:selectableItemBackground">
+            </ImageButton>
+
+            <ImageButton android:id="@+id/italic"
+                android:contentDescription="@null"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_format_italic"
+                android:scaleType="center"
+                android:tint="?attr/BackgroundTint"
+                android:background="?android:selectableItemBackground">
+            </ImageButton>
+
+            <ImageButton android:id="@+id/underline"
+                android:contentDescription="@null"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_format_underline"
+                android:scaleType="center"
+                android:tint="?attr/BackgroundTint"
+                android:background="?android:selectableItemBackground">
+            </ImageButton>
+
+            <ImageButton android:id="@+id/strikethrough"
+                android:contentDescription="@null"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_format_strikethrough"
+                android:scaleType="center"
+                android:tint="?attr/BackgroundTint"
+                android:background="?android:selectableItemBackground">
+            </ImageButton>
+
+            <ImageButton android:id="@+id/bullet"
+                android:contentDescription="@null"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_format_bullet"
+                android:scaleType="center"
+                android:tint="?attr/BackgroundTint"
+                android:background="?android:selectableItemBackground">
+            </ImageButton>
+
+            <ImageButton android:id="@+id/quote"
+                android:contentDescription="@null"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_format_quote"
+                android:scaleType="center"
+                android:tint="?attr/BackgroundTint"
+                android:background="?android:selectableItemBackground">
+            </ImageButton>
+
+
+            <ImageButton android:id="@+id/clear"
+                android:contentDescription="@null"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_format_clear"
+                android:scaleType="center"
+                android:tint="?attr/BackgroundTint"
+                android:background="?android:selectableItemBackground">
+            </ImageButton>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
