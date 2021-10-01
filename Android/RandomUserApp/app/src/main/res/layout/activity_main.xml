@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_centerHorizontal="true"
+    android:padding="10dp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to meet a random uer"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black"
+        android:fontFamily="cursive"
+        android:textStyle="bold|italic|normal"
+
+        />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_marginBottom="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name :"
+            android:layout_gravity="center"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DevanshGaur"
+            android:layout_gravity="center"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="2dp"
+    android:layout_marginTop="4dp"
+    android:background="#C6BFBF"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender :"
+            android:layout_gravity="center"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MALE"
+            android:layout_gravity="center"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="4dp"
+        android:background="#C6BFBF"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-Mail :"
+            android:layout_gravity="center"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="abc@gmail.com"
+            android:layout_gravity="center"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="4dp"
+        android:background="#C6BFBF"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone :"
+            android:layout_gravity="center"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1234556789"
+            android:layout_gravity="center"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="4dp"
+        android:background="#C6BFBF"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address :"
+            android:layout_gravity="top"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Neel Kanth Colony"
+            android:layout_gravity="center"
+
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="175dp"
+        android:id="@+id/refresh"
+        android:text="REFRESH"/>
+
+
+</LinearLayout>
