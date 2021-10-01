@@ -24,8 +24,6 @@ Use any language. C, C++, JAVA, Data Structure and Algorithms, HTML, CSS, Androi
 
 - Fork this repo
 
-- Star this repo
-
 - Add a file
 
 - Commit the code
