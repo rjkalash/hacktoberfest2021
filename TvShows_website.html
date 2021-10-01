@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head></head>
+    <title>Assignmnet - 3</title>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap");
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.header{
+    width: 1550px;
+    
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    
+    justify-content: center;
+    position: fixed;
+
+}
+.container{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 15%;
+    height: 70px;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 1000;
+    font-family: Comic Neue, sans-serif;
+    line-height: 70px;
+    color: #fff;
+}
+.navigation{
+    height: 70px;
+    width: 40%;
+}
+.nav-bar{
+    display: flex;
+}
+.nav-link{
+    list-style-type: none;
+    color: #fff;
+    height: 70px;
+    width: 30%;
+    text-align: center;
+    line-height: 70px;
+    font-family: Comic Neue, sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    cursor: pointer;
+}
+.nav-link:hover{
+    color: rgb(240, 49, 49);
+}
+/* banner css  */
+
+.banner{
+    width: 100%;
+    height: 70vh;
+    background-color: gray;
+    background-image: url('https://images.unsplash.com/photo-1503095396549-807759245b35?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dGhlYXRyZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80');
+    background-size: cover;
+    background-position-y: -200px ;
+    background-repeat: no-repeat;
+}
+
+.banner-desc{
+    width: 40%;
+    background-color: rgba(0,0,0,.2);
+    font-size: 60px;
+    font-family: Comic Neue, sans-serif;
+    display: inline-block;
+    text-align: center;
+    margin-top: 120px;
+    margin-left: 450px;
+    font-weight: bold;
+    padding: 20px;
+    color: white;
+}
+
+.btn{
+    padding: 20px 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: solid #fff 2px;
+    background-color: #fd0202;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 10px;
+
+}
+
+.btn:hover{
+    background-color: #e73e3e;
+    
+}
+
+/* css for shows  */
+
+.shows{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.shows-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    font-size: 40px;
+    font-family: Comic Neue, sans-serif;
+    font-weight: normal;
+}
+
+.shows-parent{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.show{
+    width: 23%;
+    height: 450px;
+    background-size: cover;
+    display: flex;
+    margin-bottom: 35px;
+    overflow: hidden;
+}
+
+.show1{
+    background-position-x: -18px ;
+    background-size: cover;
+    background-image: url('https://pyxis.nymag.com/v1/imgs/986/0a9/fb8617a064d7dee0e01b7335d9769a49ac-23-friends-cover-story-lede-mobile.rvertical.w570.jpg');
+}
+
+.show2{
+    background-position-x: -320px;
+    background-image: url('https://rukminim1.flixcart.com/image/416/416/poster/q/z/b/small-ta472-zap-vampire-diaries-poster-original-imaeq3n3yywkqnh4.jpeg?q=70');
+}
+
+.show3{
+    
+    background-position-x: -20px;
+    background-image: url('https://imrightreviews.files.wordpress.com/2020/07/675ebc2fd210a8bd5362928a51514960.jpg');
+}
+
+.show4{
+    background-position-x: -50px ;
+    background-image: url('https://media.thevibes.com/images/uploads/covers/July_2021/_large/Squid_Game-_Pre-Teaser_Poster-1.jpg');
+}
+.show5{
+    background-position-x: -18px ;
+    background-size: cover;
+    background-image: url('https://i.pinimg.com/474x/09/07/71/0907717f0f343d31a348192fd98bb7fa.jpg');
+}
+
+.show6{
+    
+    background-position-x: -40px;
+    background-image: url('https://i.pinimg.com/564x/cb/ff/b7/cbffb7975e92c065ecc6b4516269b62c.jpg');
+}
+
+
+
+.show8{
+    
+   
+    background-position-x: -350px ;
+    background-image: url("https://todayinbermuda.com/wp-content/uploads/2021/09/sex-education-season-2-cast-poster-netflix.jpg");
+}
+.padd{
+    padding: 50px;
+}
+
+.show-desc{
+    height: 450px;
+    width: 100%;
+    background-color: rgba(255,255,255,.6);
+    color: #313131;
+    transition: .3s;
+    cursor: pointer;
+    margin-top: 300px;
+    
+}
+
+.show-desc:hover{
+    margin-top: 0px;
+}
+
+.show-title{
+    font-size: 20px;
+    font-family: Comic Neue, sans-serif;
+}
+
+.shows-btn{
+    padding: 15px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: solid #fff 2px;
+    background-color: #fd0202;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 10px;
+    margin-top: 20px;
+
+}
+
+.shows-text{
+    font-family: Comic Neue, sans-serif;
+    color: black;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.shows-btn:hover{
+    background-color: #e73e3e;
+}
+
+@media  (max-width:480px) {
+    .banner{
+        background: none;
+    }
+    .header{
+        margin-left: 40px;
+        width: 400px;
+        position: static;
+        background-color: rgba(255,0,0,.5);
+    }
+    
+    .container{
+        
+        flex-direction: column;
+        width: 95%;
+   
+    }
+    .shows-container{
+        flex-direction: column;
+        width: 95%;
+        margin-top: 200px;
+    }
+    .banner-desc{
+        font-size: 40px;
+        margin-left: 120px;
+        margin-top: 20px;
+        background-color: rgba(255,0,0,.5);
+    }
+    .logo{
+        width: 100%;
+        text-align: left;
+    }
+    .navigation{
+        width: 100%;
+        height: auto;
+    }
+    .nav-bar{
+        flex-direction: column;
+    }
+    .nav-link{
+        width: 100%;
+        text-align: left;
+    }
+    .shows{
+        margin-top: -400px;
+    }
+    .show{
+        background-repeat: no-repeat ;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+   
+}
+
+    </style>
+</head>
+
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                Torreentz
+            </div>
+            <nav class="navigation">
+                <ul class="nav-bar">
+                    <li class="nav-link">Home</li>
+                    <li class="nav-link">Shows</li>
+                    <li class="nav-link">Sign Up</li>
+                    <li class="nav-link">Login</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="banner-desc">
+            Watch Shows,<br>
+            Your Way.
+            <p>
+                <button class="btn">Join Now</button>
+            </p>
+        </div>
+    </section>
+
+    <!-- Shows section  -->
+
+    <section class="shows">
+        <div class="shows-container">
+            <h1 class="title"><u>Shows</u></h1>
+            <div class="shows-parent">
+
+                <div class="show show1">
+                    <div class="show-desc">
+                        <div class="padd">
+                            <h1 class="show-title">Friends</h1>
+                            <button class="shows-btn">
+                                All Seasons
+                            </button>
+
+                            <p class="shows-text">
+                                Friends is an American television sitcom created by David Crane and Marta Kauffman, which aired on NBC from September 22, 1994, to May 6, 2004, lasting ten seasons.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="show show2">
+                    <div class="show-desc">
+                        <div class="padd">
+                            <h1 class="show-title">The Vampire Diaries</h1>
+                            <button class="shows-btn">
+                                All Seasons
+                            </button>
+                            <p class="shows-text">
+                                The Vampire Diaries is an American supernatural teen drama television series developed by Kevin Williamson and Julie Plec, based on the book series of the same name written by L. J. Smith. The series premiered on The CW on September 10, 2009, and concluded on March 10, 2017, having aired 171 episodes over eight seasons.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="show show3">
+                    <div class="show-desc">
+                        <div class="padd">
+                            <h1 class="show-title">Dark</h1>
+                            <button class="shows-btn">
+                                All Seasons
+                            </button>
+                            <p class="shows-text">
+                                Dark is a German science fiction thriller streaming television series co-created by Baran bo Odar and Jantje Friese. It ran for three seasons from 2017 to 2020. In the aftermath of a child's disappearance, Dark follows characters from the fictional German town of Winden as they pursue the truth. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="show show4">
+                    <div class="show-desc">
+                        <div class="padd">
+                            <h1 class="show-title">Squid Game</h1>
+                            <button class="shows-btn">
+                                All Seasons
+                            </button>
+
+                            <p class="shows-text">
+                                Squid Game (Korean: 오징어 게임; RR: Ojing-eo Geim) is a South Korean survival drama streaming television series written and directed by Hwang Dong-hyuk. The nine-episode series, tells the story of a group of 456 people who are invited to risk their lives in a mysterious survival game with a US$38.7 million prize.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="show show5">
+                    <div class="show-desc">
+                        <div class="padd">
+                            <h1 class="show-title">Lucifer</h1>
+                            <button class="shows-btn">
+                                All Seasons
+                            </button>
+
+                            <p class="shows-text">
+                                Lucifer is an American urban fantasy television series developed by Tom Kapinos that premiered on January 25, 2016, and concluded on September 10, 2021. It is based on the DC Comics character created by Neil Gaiman, Sam Kieth, and Mike Dringenberg taken from the comic book series The Sandman.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="show show6">
+                    <div class="show-desc">
+                        <div class="padd">
+                            <h1 class="show-title">Vikings</h1>
+                            <button class="shows-btn">
+                                All Seasons
+                            </button>
+                            <p class="shows-text">
+                                Vikings is a historical drama television series created and written by Michael Hirst for the History channel, a Canadian network. Filmed in Ireland, it premiered on March 3, 2013, in Canada. The series concluded on December 30, 2020.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+               
+
+                <div class="show show8">
+                    <div class="show-desc">
+                        <div class="padd">
+                            <h1 class="show-title">Sex Education</h1>
+                            <button class="shows-btn">
+                                All Seasons
+                            </button>
+
+                            <p class="shows-text">
+                                Sex Education is a British teen comedy-drama streaming television series created by Laurie Nunn for Netflix. The series follows the lives of the students, staff and parents of the fictitious Moordale Secondary School as they contend with various personal dilemmas, often related to sexual intimacy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
