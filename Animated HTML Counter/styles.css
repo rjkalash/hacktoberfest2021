@@ -1,0 +1,461 @@
+body {
+  font-size: 14px;
+}
+
+.content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #8888;
+}
+.counter {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes animate-top {
+  0% {
+    background: #3e3e3e; /* Old browsers */
+    background: -moz-linear-gradient(
+      top,
+      #3e3e3e 0%,
+      #2b2b2b 100%
+    ); /* FF3.6+ */
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0%, #3e3e3e),
+      color-stop(100%, #2b2b2b)
+    ); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(
+      top,
+      #3e3e3e 0%,
+      #2b2b2b 100%
+    ); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(
+      top,
+      #3e3e3e 0%,
+      #2b2b2b 100%
+    ); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #3e3e3e 0%, #2b2b2b 100%); /* IE10+ */
+    background: whi; /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e3e3e', endColorstr='#2b2b2b',GradientType=0 );
+  }
+
+  100% {
+    color: #474747;
+
+    transform: translateX(0px) translateY(0.35em) translateZ(5px)
+      rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
+@keyframes animate-bottom {
+  0% {
+    color: #474747;
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg)
+      rotateY(0deg) rotateZ(0deg);
+
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animate-top {
+  0% {
+    background: #3e3e3e; /* Old browsers */
+    background: -moz-linear-gradient(
+      top,
+      #3e3e3e 0%,
+      #2b2b2b 100%
+    ); /* FF3.6+ */
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0%, #3e3e3e),
+      color-stop(100%, #2b2b2b)
+    ); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(
+      top,
+      #3e3e3e 0%,
+      #2b2b2b 100%
+    ); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(
+      top,
+      #3e3e3e 0%,
+      #2b2b2b 100%
+    ); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #3e3e3e 0%, #2b2b2b 100%); /* IE10+ */
+    background: transparent; /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e3e3e', endColorstr='#2b2b2b',GradientType=0 );
+  }
+
+  100% {
+    color: #474747;
+
+    -webkit-transform: translateX(0px) translateY(0.35em) translateZ(5px)
+      rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
+@-webkit-keyframes animate-bottom {
+  0% {
+    color: #474747;
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translateX(0) translateY(0) translateZ(0) rotateX(0deg)
+      rotateY(0deg) rotateZ(0deg);
+
+    opacity: 1;
+  }
+}
+
+.number {
+  position: relative;
+  float: left;
+  margin-right: 5px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 5em;
+
+  width: 1em;
+  height: 1.5em;
+}
+
+.number span {
+  position: absolute;
+  display: block;
+  font-weight: bold;
+  text-align: center;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  color: black;
+
+  width: 1em;
+  height: 1.5em;
+  perspective: 7.14em;
+}
+
+.number span:before {
+  display: block;
+  height: 0.75em;
+  overflow: hidden;
+
+  line-height: 1.52em;
+  border: 1px solid black;
+  border-bottom: none;
+  border-radius: 0;
+
+  background: #3e3e3e; /* Old browsers */
+  background: -moz-linear-gradient(top, #3e3e3e 0%, #2b2b2b 100%); /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #3e3e3e),
+    color-stop(100%, #2b2b2b)
+  ); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    top,
+    #3e3e3e 0%,
+    #2b2b2b 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    top,
+    #3e3e3e 0%,
+    #2b2b2b 100%
+  ); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #3e3e3e 0%, #2b2b2b 100%); /* IE10+ */
+  background: white; /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e3e3e', endColorstr='#2b2b2b',GradientType=0 ); /* IE6-9 */
+}
+
+.number span:after {
+  display: block;
+  height: 0.75em;
+  overflow: hidden;
+  line-height: 0;
+
+  border: 1px solid black;
+
+  border-radius: 0;
+
+  transition: color 100ms, background-color 100ms;
+
+  background: #252525; /* Old browsers */
+  background: -moz-linear-gradient(top, #252525 0%, #070707 100%); /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #252525),
+    color-stop(100%, #070707)
+  ); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    top,
+    #252525 0%,
+    #070707 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    top,
+    #252525 0%,
+    #070707 100%
+  ); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #252525 0%, #070707 100%); /* IE10+ */
+  background: white; /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#252525', endColorstr='#070707',GradientType=0 ); /* IE6-9 */
+}
+
+.flip .primary:before {
+  animation: animate-top 250ms;
+  -moz-animation-fill-mode: forwards;
+
+  -webkit-animation: animate-top 250ms;
+  -webkit-animation-fill-mode: forwards;
+
+  background: #000000; /* Old browsers */
+  background: -moz-linear-gradient(top, #000000 0%, #303030 100%); /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #000000),
+    color-stop(100%, #303030)
+  ); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    top,
+    #000000 0%,
+    #303030 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    top,
+    #000000 0%,
+    #303030 100%
+  ); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #000000 0%, #303030 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #000000 0%, #303030 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#303030',GradientType=0 ); /* IE6-9 */
+}
+
+.flip .primary:after {
+  animation: animate-bottom 250ms;
+  -moz-animation-fill-mode: forwards;
+  animation-delay: 250ms;
+
+  -webkit-animation: animate-bottom 250ms;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-delay: 250ms;
+}
+
+.primary:after {
+  opacity: 0;
+
+  transform: translateX(0) translateY(-0.28em) translateZ(0.35em) rotateX(91deg)
+    rotateY(0deg) rotateZ(0deg);
+
+  -webkit-transform: translateX(0) translateY(-0.28em) translateZ(0.35em)
+    rotateX(91deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.primary {
+  z-index: 2;
+}
+
+.secondary {
+  z-index: 1;
+}
+
+/* Number 0 */
+
+[data-number='0'] span.primary:before {
+  content: '0';
+}
+
+[data-number='0'] span.secondary:after {
+  content: '0';
+}
+
+[data-number='0'] span.secondary:before {
+  content: '1';
+}
+
+[data-number='0'] span.primary:after {
+  content: '1';
+}
+
+/* Number 9 */
+
+[data-number='9'] span.primary:before {
+  content: '9';
+}
+
+[data-number='9'] span.secondary:after {
+  content: '9';
+}
+
+[data-number='9'] span.secondary:before {
+  content: '0';
+}
+
+[data-number='9'] span.primary:after {
+  content: '0';
+}
+
+/* Number 8 */
+
+[data-number='8'] span.primary:before {
+  content: '8';
+}
+
+[data-number='8'] span.secondary:after {
+  content: '8';
+}
+
+[data-number='8'] span.secondary:before {
+  content: '9';
+}
+
+[data-number='8'] span.primary:after {
+  content: '9';
+}
+
+/* Number 7 */
+
+[data-number='7'] span.primary:before {
+  content: '7';
+}
+
+[data-number='7'] span.secondary:after {
+  content: '7';
+}
+
+[data-number='7'] span.secondary:before {
+  content: '8';
+}
+
+[data-number='7'] span.primary:after {
+  content: '8';
+}
+
+/* Number 6 */
+
+[data-number='6'] span.primary:before {
+  content: '6';
+}
+
+[data-number='6'] span.secondary:after {
+  content: '6';
+}
+
+[data-number='6'] span.secondary:before {
+  content: '7';
+}
+
+[data-number='6'] span.primary:after {
+  content: '7';
+}
+
+/* Number 5 */
+
+[data-number='5'] span.primary:before {
+  content: '5';
+}
+
+[data-number='5'] span.secondary:after {
+  content: '5';
+}
+
+[data-number='5'] span.secondary:before {
+  content: '6';
+}
+
+[data-number='5'] span.primary:after {
+  content: '6';
+}
+
+/* Number 4 */
+
+[data-number='4'] span.primary:before {
+  content: '4';
+}
+
+[data-number='4'] span.secondary:after {
+  content: '4';
+}
+
+[data-number='4'] span.secondary:before {
+  content: '5';
+}
+
+[data-number='4'] span.primary:after {
+  content: '5';
+}
+
+/* Number 3 */
+
+[data-number='3'] span.primary:before {
+  content: '3';
+}
+
+[data-number='3'] span.secondary:after {
+  content: '3';
+}
+
+[data-number='3'] span.secondary:before {
+  content: '4';
+}
+
+[data-number='3'] span.primary:after {
+  content: '4';
+}
+
+/* Number 2 */
+
+[data-number='2'] span.primary:before {
+  content: '2';
+}
+
+[data-number='2'] span.secondary:after {
+  content: '2';
+}
+
+[data-number='2'] span.secondary:before {
+  content: '3';
+}
+
+[data-number='2'] span.primary:after {
+  content: '3';
+}
+
+/* Number 1 */
+
+[data-number='1'] span.primary:before {
+  content: '1';
+}
+
+[data-number='1'] span.secondary:after {
+  content: '1';
+}
+
+[data-number='1'] span.secondary:before {
+  content: '2';
+}
+
+[data-number='1'] span.primary:after {
+  content: '2';
+}
