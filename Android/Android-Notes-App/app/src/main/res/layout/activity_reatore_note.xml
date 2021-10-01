@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/BackgroundColor"
+    tools:context=".Activity.Note.CreateNoteActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/_40sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <androidx.appcompat.widget.Toolbar
+                app:title="@string/app_name"
+                app:titleTextColor="?attr/BackgroundTint"
+                android:id="@+id/reatore_toolbar_note"
+                app:navigationIcon="?attr/icon_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints" />
+
+
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/reatore_inputNoteTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:background="@null"
+                android:textColor="?attr/Titel_1"
+                android:textColorHint="?attr/Titel_2"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintTop_toBottomOf="@id/reatore_toolbar_note" />
+
+
+            <TextView
+                android:id="@+id/reatore_textDeteTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="?attr/Titel_2"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="@id/reatore_inputNoteTitle"
+                app:layout_constraintStart_toStartOf="@id/reatore_inputNoteTitle"
+                app:layout_constraintTop_toBottomOf="@id/reatore_inputNoteTitle" />
+
+            <TextView
+                android:id="@+id/reatore_inputNoteSubtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:background="@null"
+                android:hint="@string/note_subtitle"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textColor="?attr/Titel_1"
+                android:textColorHint="?attr/Titel_2"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/reatore_viewSubtitleIndicator"
+                app:layout_constraintTop_toBottomOf="@id/reatore_textDeteTime" />
+
+            <View
+                android:id="@+id/reatore_viewSubtitleIndicator"
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:background="@drawable/background_subtitle_indicr"
+                app:layout_constraintBottom_toBottomOf="@id/reatore_inputNoteSubtitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/reatore_inputNoteSubtitle" />
+
+
+            <LinearLayout
+                android:id="@+id/reatore_layoutWebURL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12ssp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_12ssp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/reatore_inputNoteSubtitle"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/reatore_textWebURL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autoLink="web"
+                    android:includeFontPadding="false"
+                    android:textSize="@dimen/_13ssp"
+                    />
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:contentDescription="@string/todo" />
+
+            </LinearLayout>
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                app:riv_corner_radius="@dimen/_10sdp"
+                android:id="@+id/reatore_imageNote"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_250sdp"
+                android:layout_marginStart="@dimen/_12ssp"
+                android:layout_marginTop="@dimen/_12ssp"
+                android:layout_marginEnd="@dimen/_12ssp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/reatore_layoutWebURL"/>
+
+            <ImageView
+               android:id="@+id/reatore_imageRemoveImage"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="10dp"
+                android:padding="@dimen/_4sdp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/reatore_imageNote"
+                app:layout_constraintTop_toTopOf="@+id/reatore_imageNote"
+                android:contentDescription="@string/todo" />
+
+
+
+            <TextView
+                android:id="@+id/reatore_inputNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="@string/type_note_here"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:minHeight="@dimen/_100sdp"
+                android:textColor="?attr/Titel_1"
+                android:textColorHint="?attr/Titel_2"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toTopOf="@+id/adView_reatore"
+                app:layout_constraintTop_toBottomOf="@id/reatore_imageNote"/>
+
+
+            <LinearLayout
+                android:paddingTop="@dimen/_10sdp"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:id="@+id/adView_reatore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/reatore_inputNote"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:paddingBottom="@dimen/_6sdp"
+        android:paddingTop="@dimen/_6sdp"
+        android:textAlignment="center"
+        android:background="?attr/BackgroundTint"
+        android:textColor="?attr/BackgroundColor"
+        app:behavior_peekHeight="@dimen/_40sdp"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        android:layout_width="match_parent"
+        android:text="@string/this_content_is_deleted"
+        android:layout_height="wrap_content"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
