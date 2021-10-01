@@ -1,0 +1,2 @@
+Dependencies for Project 'Prime', Target 'Target 1': (DO NOT MODIFY !)
+F (.\prime.asm)(0x614C261B)(--cpu ARM7TDMI --bi --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 525"--list .\listings\prime.lst --xref -o .\objects\prime.o --depend .\objects\prime.d)
