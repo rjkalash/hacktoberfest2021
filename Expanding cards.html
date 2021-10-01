@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanding cards</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .container {
+        display: flex;
+        width: 90vw;
+    }
+
+    .panel {
+        height: 80vh;
+        border-radius: 50px;
+        color: #fff;
+        cursor: pointer;
+        flex: 0.5;
+        margin: 10px;
+        position: relative;
+        transition: flex 0.7s ease-in;
+    }
+
+    .panel h3 {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        margin: 0;
+        opacity: 0;
+    }
+
+    .panel.active {
+        flex: 5;
+    }
+
+    .panel.active h3 {
+        opacity: 1;
+        transition: opacity 0.3s ease-in 0.2s;
+    }
+
+    @media(max-width:480px) {
+        .container {
+            width: 100vw;
+        }
+
+        .panel:nth-of-type(4),
+        .panel:nth-of-type(5) {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="panel active"
+            style="background-image: url('https://images.unsplash.com/photo-1629122433131-53e850a3a2ce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')">
+            <h3>Finds this card</h3>
+        </div>
+        <div class="panel"
+            style="background-image: url('https://images.unsplash.com/photo-1622495894307-93143fc57155?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=734&q=80')">
+            <h3>go to hell</h3>
+        </div>
+        <div class="panel"
+            style="background-image: url('https://images.unsplash.com/photo-1629109079207-1b79be8af6a8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')">
+            <h3>kindly fix this</h3>
+        </div>
+        <div class="panel"
+            style="background-image: url('https://images.unsplash.com/photo-1629122217291-0faae4ea9b5c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1167&q=80')">
+            <h3>umm, its late</h3>
+        </div>
+        <div class="panel"
+            style="background-image: url('https://images.unsplash.com/photo-1586227740560-8cf2732c1531?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1128&q=80')">
+            <h3>can you go back</h3>
+        </div>
+    </div>
+    <!-- <script src="script.js"></script> -->
+    <script>
+        const panels = document.querySelectorAll('.panel');
+        panels.forEach((panel) => {
+            panel.addEventListener('click', () => {
+                removeActiveClasses();
+                panel.classList.add('active');
+            })
+        })
+        function removeActiveClasses() {
+            panels.forEach((panel) => {
+                panel.classList.remove('active');
+            })
+        }
+    </script>
+</body>
+
+</html>
