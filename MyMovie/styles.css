@@ -1,0 +1,292 @@
+body {
+  font-family: 'Bebas Neue', cursive;
+  background-color: black;
+}
+
+
+/* navbar styling */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 30px 0;
+  font-family: 'Bebas Neue', cursive;
+  transition: all 0.3s ease;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.navbar.sticky {
+  padding: 15px 0;
+  background: #53B8BB;
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo:hover {
+  background-image: linear-gradient(brown, purple);
+  padding-right: 5px;
+}
+
+.navbar .logo a:hover {
+  color: black;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.navbar .logo a {
+  color: red;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.navbar .logo a span {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+  color: red;
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a {
+  display: block;
+  color: red;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: white;
+}
+
+.navbar.sticky .menu li a:hover {
+  color: red;
+}
+
+.search {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50px;
+  font-family: inherit;
+  padding: 0rem 1rem;
+  color: red;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.search::placeholder {
+  color: red;
+}
+
+.search:focus {
+  outline: none;
+  background-color: black;
+}
+
+
+
+/* home */
+#title {
+  color: #fff;
+}
+
+.container-fluid {
+  padding: 150px 50px;
+  background-image: url(images/bg1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 5s;
+  animation-name: animate;
+  animation-direction: alternate-reverse;
+  animation-duration: 30s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    background-image: url(images/bg2.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  20% {
+    background-image: url(images/bg3.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  40% {
+    background-image: url(images/bg4.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  60% {
+    background-image: url(images/bg5.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  70% {
+    background-image: url(images/bg6.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+h1 {
+  color: white;
+  font-weight: bold;
+  font-family: 'Caveat', cursive;
+  font-size: 200%;
+}
+
+h2 {
+  font-size: 100%;
+  color: #787A91;
+  font-weight: bold;
+  padding-bottom: 1em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+  font-size: 300%;
+  color: red;
+  padding-bottom: 1em;
+  font-family: 'Cinzel', serif;
+}
+
+/* Button */
+.pushable {
+  align-items: center;
+  background: hsl(340deg 100% 32%);
+  border: none;
+  border-radius: 8px;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  color: red;
+}
+
+.front {
+  display: block;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: hsl(345deg 100% 47%);
+  color: white;
+  transform: translateY(-6px);
+  background-color: red;
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+}
+
+.pushable:focus:not(:red) {
+  outline: none;
+  color: red;
+}
+
+/* MovieList */
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  width: 400px;
+  height: 600px;
+  margin: 1rem;
+  background-color: red;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  color: #22254b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.2rem;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+  margin-top: 0;
+}
+
+.movie-info span {
+  background-color: black;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+/* .movie-info span.green {
+  color: yellow;
+}
+
+.movie-info span.orange {
+  color: orange;
+}
+
+.movie-info span.red {
+  color: red;
+} */
+
+.overview {
+  background-color: yellow;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  overflow-y: auto;
+  transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+
+/* contact */
+
+
+.text{
+  text-align: center;
+}
+
+em{
+  color: white;
+  text-align: center;
+  padding-left: 600px;
+}
