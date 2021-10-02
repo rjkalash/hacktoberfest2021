@@ -1,0 +1,74 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             PROGRAM,CODE,READONLY
+    2 00000000         ENTRY
+    3 00000000 E59F0010        LDR              R0,VALUE1
+    4 00000004 E59F1010        LDR              R1,VALUE2
+    5 00000008         LOOP
+    6 00000008 E0030190        MUL              R3,R0,R1
+    7 0000000C E2811001        ADD              R1,#0x00000001
+    8 00000010 E351000B        CMP              R1,#0x0000000B
+    9 00000014 1AFFFFFB        BNE              LOOP
+   10 00000018         
+   11 00000018                 AREA             PROGRAM,DATA,READONLY
+   12 00000018 00000008 
+                       VALUE1  DCD              &00000008
+   13 0000001C 00000001 
+                       VALUE2  DCD              &00000001
+   14 00000020                 END
+Command Line: --debug --xref --diag_suppress=9931 --bi --apcs=interwork --depen
+d=.\objects\mul_table8.d -o.\objects\mul_table8.o -IC:\Keil_v5\ARM\RV31\INC -IC
+:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_
+VERSION SETA 525" --list=.\listings\mul_table8.lst mul_table8.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ENTRY 00000000
+
+Symbol: ENTRY
+   Definitions
+      At line 2 in file mul_table8.asm
+   Uses
+      None
+Comment: ENTRY unused
+LOOP 00000008
+
+Symbol: LOOP
+   Definitions
+      At line 5 in file mul_table8.asm
+   Uses
+      At line 9 in file mul_table8.asm
+Comment: LOOP used once
+PROGRAM 00000000
+
+Symbol: PROGRAM
+   Definitions
+      At line 1 in file mul_table8.asm
+   Uses
+      None
+Comment: PROGRAM unused
+VALUE1 00000018
+
+Symbol: VALUE1
+   Definitions
+      At line 12 in file mul_table8.asm
+   Uses
+      At line 3 in file mul_table8.asm
+Comment: VALUE1 used once
+VALUE2 0000001C
+
+Symbol: VALUE2
+   Definitions
+      At line 13 in file mul_table8.asm
+   Uses
+      At line 4 in file mul_table8.asm
+Comment: VALUE2 used once
+5 symbols
+337 symbols in table

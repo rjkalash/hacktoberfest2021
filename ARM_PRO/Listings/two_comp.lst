@@ -1,0 +1,52 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             PROGRAM,CODE,READONLY
+    2 00000000         ENTRY
+    3 00000000 E59F0004        LDR              R0,VALUE1
+    4 00000004 E1E01000        MVN              R1,R0
+    5 00000008 E2810001        ADD              R0,R1,#1
+    6 0000000C                 AREA             PROGRAM,DATA,READONLY
+    7 0000000C 00000002 
+                       VALUE1  DCD              &00000002
+    8 00000010         
+    9 00000010                 END
+Command Line: --debug --xref --diag_suppress=9931 --bi --apcs=interwork --depen
+d=.\objects\two_comp.d -o.\objects\two_comp.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Ke
+il_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERS
+ION SETA 525" --list=.\listings\two_comp.lst TWO_COMP.ASM
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ENTRY 00000000
+
+Symbol: ENTRY
+   Definitions
+      At line 2 in file TWO_COMP.ASM
+   Uses
+      None
+Comment: ENTRY unused
+PROGRAM 00000000
+
+Symbol: PROGRAM
+   Definitions
+      At line 1 in file TWO_COMP.ASM
+   Uses
+      None
+Comment: PROGRAM unused
+VALUE1 0000000C
+
+Symbol: VALUE1
+   Definitions
+      At line 7 in file TWO_COMP.ASM
+   Uses
+      At line 3 in file TWO_COMP.ASM
+Comment: VALUE1 used once
+3 symbols
+335 symbols in table

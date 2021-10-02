@@ -1,0 +1,74 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             PROGRAM,CODE,READONLY
+    2 00000000         ENTRY
+    3 00000000 E59F0014        LDR              R0,VALUE1
+    4 00000004 E59F1014        LDR              R1,VALUE2
+    5 00000008 E3A02000        MOV              R2,0X00
+    6 0000000C         LOOP
+    7 0000000C E0400001        SUB              R0,R1
+    8 00000010 E3500000        CMP              R0,#0
+    9 00000014 E2822001        ADD              R2,0X01
+   10 00000018 AAFFFFFB        BGE              LOOP
+   11 0000001C                 AREA             PROGRAM,DATA,READONLY
+   12 0000001C 00000006 
+                       VALUE1  DCD              &00000006
+   13 00000020 00000002 
+                       VALUE2  DCD              &00000002
+   14 00000024                 END
+Command Line: --debug --xref --diag_suppress=9931 --bi --apcs=interwork --depen
+d=.\objects\div_using_sub.d -o.\objects\div_using_sub.o -IC:\Keil_v5\ARM\RV31\I
+NC -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UV
+ISION_VERSION SETA 525" --list=.\listings\div_using_sub.lst DIV_USING_SUB.ASM
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ENTRY 00000000
+
+Symbol: ENTRY
+   Definitions
+      At line 2 in file DIV_USING_SUB.ASM
+   Uses
+      None
+Comment: ENTRY unused
+LOOP 0000000C
+
+Symbol: LOOP
+   Definitions
+      At line 6 in file DIV_USING_SUB.ASM
+   Uses
+      At line 10 in file DIV_USING_SUB.ASM
+Comment: LOOP used once
+PROGRAM 00000000
+
+Symbol: PROGRAM
+   Definitions
+      At line 1 in file DIV_USING_SUB.ASM
+   Uses
+      None
+Comment: PROGRAM unused
+VALUE1 0000001C
+
+Symbol: VALUE1
+   Definitions
+      At line 12 in file DIV_USING_SUB.ASM
+   Uses
+      At line 3 in file DIV_USING_SUB.ASM
+Comment: VALUE1 used once
+VALUE2 00000020
+
+Symbol: VALUE2
+   Definitions
+      At line 13 in file DIV_USING_SUB.ASM
+   Uses
+      At line 4 in file DIV_USING_SUB.ASM
+Comment: VALUE2 used once
+5 symbols
+337 symbols in table
