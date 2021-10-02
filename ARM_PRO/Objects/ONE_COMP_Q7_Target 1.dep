@@ -1,2 +1,0 @@
-Dependencies for Project 'ONE_COMP_Q7', Target 'Target 1': (DO NOT MODIFY !)
-F (.\ONE_COMP.ASM)(0x6143ABDE)(--cpu ARM7TDMI --bi --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 525"--list .\listings\one_comp.lst --xref -o .\objects\one_comp.o --depend .\objects\one_comp.d)
