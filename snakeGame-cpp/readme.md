@@ -1,1 +1,1 @@
-Snake gae made in c++
+Snake game made in c++
