@@ -1,2 +1,0 @@
-include ':app'
-rootProject.name = "Tic Tac Toe"
