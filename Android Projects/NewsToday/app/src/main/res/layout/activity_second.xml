@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    android:orientation="vertical"
+    android:background="#634133">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:background="#231C07">
+
+    <com.keshav.newstoday.HorizontalListView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:widget="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/HorizontalListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/transparent"
+        widget:dividerWidth="5dp" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listNews"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:dividerHeight="10dp"
+        android:divider="#634133"
+        android:elevation="10dp"
+        android:layout_weight="80"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:scrollbars="none">
+
+    </ListView>
+
+</LinearLayout>
