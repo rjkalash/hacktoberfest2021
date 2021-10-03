@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F78764"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:src="@drawable/news" />
+
+        <TextView
+            android:id="@+id/qu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20sp"
+            android:text="News Today"
+            android:textStyle="bold"
+            android:textColor="#231C07"
+            android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/quote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10sp"
+        android:text="Your News Companion!"
+        android:textColor="#231C07"
+        android:textSize="20sp" />
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:text="Powered by newsapi.org"
+            android:textColor="#231C07"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
