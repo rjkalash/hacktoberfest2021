@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Demo 2</title>
+    <!-- Packages required for react to work, don't remove these -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <!-- Write your code inside this script tag only. There's a demo app component created for you -->
+    <script type="text/babel">
+    class App extends React.Component{
+  constructor(){
+    super();
+    this.state ={
+      message:[1,2,3,4,5],
+      color:"red",
+      fontsize:28
+    }
+  }
+  render(){
+    const mystyle={
+      color:this.state.color,
+      fontSize:this.state.fontsize
+    }
+    const changeThis = ()=>{
+      var newarr = this.state.message;
+      newarr.pop();
+      if(newarr.length===4){
+        this.setState({color:"blue"})
+        this.setState({fontsize:48})
+      }if(newarr.length===3){
+        this.setState({color:"yellow"})
+        this.setState({fontsize:58})
+      }if(newarr.length===2){
+        this.setState({color:"pink"})
+        this.setState({fontsize:68})
+      }if(newarr.length===1){
+        this.setState({color:"aqua"})
+        this.setState({fontsize:78})
+      }
+      this.setState({ message:newarr });
+    }
+    return(
+    <div>
+      <h1 onClick={changeThis} style={mystyle}>{this.state.message}</h1>
+    </div>
+    )
+  }
+}
+
+ReactDOM.render(<App/>,document.getElementById('app'));  
+    </script>
+  </body>
+</html>
