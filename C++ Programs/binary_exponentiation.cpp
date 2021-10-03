@@ -1,22 +1,49 @@
-#include <bit/stdc++.h>
-using namespace std;
+#include <iostream>
 
-long long binpow(long long a, long long b) {
-    long long res = 1;
-    while (b > 0) {
-        if (b & 1)
-            res = res * a;
-        a = a * a;
-        b >>= 1;
+/* 
+ * Function to calculate A raised to power B (A^B) in O(log B)
+ */
+int64_t binary_exponentiation( int64_t A, int64_t B ) {
+    int64_t res { 1 };
+
+    while( B ) {
+        if( B & 1 ) 
+            res *= A;
+
+        A *= A;
+        B >>= 1;
+    }
+
+    return res;
+}
+
+/* 
+ * Function to calculate (A ^ B) % MOD in O(log B). 
+ */
+int64_t binary_exponentiation( int64_t A, int64_t B, int64_t MOD ) {
+    A %= MOD;
+    int64_t res { 1 };
+
+    while( B ) {
+        if( B & 1 ) 
+            res = res * A % MOD;
+
+        A = A * A % MOD;
+        B >>= 1;
     }
     return res;
 }
 
 int main() {
-    long long base, exp;
-    cin>>base>>exp;
+    int64_t A, B;
 
-    long long ans = binpow(base, exp);
-    cout<<ans<<'\n';
-    return 0;
+    std::cout << "Enter the value: ";
+    std::cin >> A;
+
+    std::cout << "Enter the exponent: ";
+    std::cin >> B;
+
+    std::cout << A << "pow" << B << ": " << binary_exponentiation( A, B ) << std::endl;
 }
+
+
