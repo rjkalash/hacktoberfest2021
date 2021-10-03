@@ -1,46 +1,72 @@
-#include<iostream>
-using namespace std;
-int main()
-{
-    int search(int [],int,int);
-    int n,i,a[100],e,res;
-    cout<<"How Many Elements:";
-    cin>>n;
-    cout<<"\nEnter Elements of Array in Ascending order\n";
+#include <iostream>
+#include <algorithm>
+#include <vector>
 
-    for(i=0;i<n;++i)
-    {
-        cin>>a[i];
-    }
+int64_t binary_search( const std::vector< int64_t >& val, int64_t low, int64_t high, int64_t target ) {
+    while( low < high ) {
+        int64_t mid { low + ( high - low ) / 2 };
 
-    cout<<"\nEnter element to search:";
-    cin>>e;
+        // We've found our element. Just return with the pos
+        if( val[mid] == target )
+            return mid + 1;
 
-    res=search(a,n,e);
+        // Value at mid is greater than target. Look for the target in the segment [low...mid)
+        if( val[mid] > target )
+            high = mid - 1;
 
-    if(res!=-1)
-        cout<<"\nElement found at position "<<res+1;
-    else
-        cout<<"\nElement is not found....!!!";
-    return 0;
-}
-int search(int a[],int n,int e)
-{
-    int f,l,m;
-    f=0;
-    l=n-1;
-
-    while(f<=l)
-    {
-        m=(f+l)/2;
-        if(e==a[m])
-            return(m);
-        else
-            if(e>a[m])
-                f=m+1;
-            else
-                l=m-1;
+        // Value at mid is less than target. Look for the target in the segment (mid, high]
+        if( val[mid] < target )
+            low = mid + 1;
     }
 
     return -1;
 }
+
+int64_t recursive_binary_search( const std::vector< int64_t >& val, int64_t low, int64_t high, int64_t target ) {
+    while( low < high ) {
+        int64_t mid { low + ( high - low ) / 2 };
+
+        // We've found our element. Just return with the pos
+        if( val[mid] == target )
+            return mid + 1;
+
+        // Value at mid is greater than target. Recursively search for the target in the segment [low...mid)
+        if( val[mid] > target )
+            return recursive_binary_search( val, low, mid - 1, target );
+
+        // Value at mid is less than target. Look for the target in the segment (mid, high]
+        if( val[mid] < target )
+            return recursive_binary_search( val, mid + 1, high, target );
+    }
+
+    return -1;
+}
+
+int main() {
+    int64_t N;
+
+    std::cout << "Enter the size of the array: ";
+    std::cin >> N;
+
+    std::vector< int64_t > vals( N );
+
+    for( int64_t& v : vals )
+        std::cin >> v;
+
+    std::sort( vals.begin(), vals.end() );
+
+    int64_t target;
+    std::cout << "Enter the value to be searched in the vals array: ";
+    std::cin >> target;
+
+    int64_t findPos { binary_search( vals, 0, N, target ) };
+
+    if( findPos == -1 ) {
+        std::cout << "Target not present in the vals array" << std::endl;
+        return 0;
+    }
+
+    std::cout << "Target found at position: " << findPos << std::endl;
+}
+
+
