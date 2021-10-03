@@ -1,46 +1,43 @@
-#include<iostream>
-using namespace std;
-int main()
-{
-    int search(int [],int,int);
-    int n,i,a[100],e,res;
-    cout<<"How Many Elements:";
-    cin>>n;
-    cout<<"\nEnter Elements of Array in Ascending order\n";
+#include <bits/stdc++.h>
 
-    for(i=0;i<n;++i)
-    {
-        cin>>a[i];
-    }
+int64_t search( const std::vector< int64_t >& val, int64_t low, int64_t high, int64_t target ) {
+    while( low < high ) {
+        int64_t mid { low + ( high - low ) / 2 };
 
-    cout<<"\nEnter element to search:";
-    cin>>e;
+        if( val[mid] == target ) 
+            return mid + 1;
 
-    res=search(a,n,e);
+        if( val[mid] > target ) 
+            high = mid - 1;
 
-    if(res!=-1)
-        cout<<"\nElement found at position "<<res+1;
-    else
-        cout<<"\nElement is not found....!!!";
-    return 0;
-}
-int search(int a[],int n,int e)
-{
-    int f,l,m;
-    f=0;
-    l=n-1;
-
-    while(f<=l)
-    {
-        m=(f+l)/2;
-        if(e==a[m])
-            return(m);
-        else
-            if(e>a[m])
-                f=m+1;
-            else
-                l=m-1;
+        if( val[mid] < target )
+            low = mid + 1;
     }
 
     return -1;
+}
+
+int main() {
+    int64_t N;
+    std::cout << "Enter the size of the array: ";
+    std::cin >> N;
+
+    std::vector< int64_t > val;
+
+    std::cout << "Enter elements in the val array: ";
+    for( auto& v : val )
+        std::cin >> v;
+
+    int64_t target;
+    std::cout << "Enter the value to search in the val array: ";
+    std::cin >> target;
+
+    int64_t pos { search( val, 0, N, target ) };
+
+    if( pos == -1 ) {
+        std::cout << target << " not found in the val array" << std::endl;
+        return 0;
+    }
+
+    std::cout << "Found at pos: " << pos << std::endl;
 }
