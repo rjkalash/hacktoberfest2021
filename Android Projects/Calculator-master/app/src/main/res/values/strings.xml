@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="c">C</string>
+    <string name="backspace"><![CDATA[<--]]></string>
+    <string name="percentage">%</string>
+    <string name="divie">/</string>
+    <string name="divide">/</string>
+    <string name="currency">Currency</string>
+    <string name="length">Length</string>
+    <string name="area">Area</string>
+    <string name="age">Age</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="multiply">*</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="minus">-</string>
+    <string name="_2">2</string>
+    <string name="_1">1</string>
+    <string name="_3">3</string>
+    <string name="plus">+</string>
+    <string name="orientation">\\_/</string>
+    <string name="_0">0</string>
+    <string name="dot">.</string>
+    <string name="equal">=</string>
+    <string name="l">L</string>
+    <string name="percent">%</string>
+    <string name="choose_your_birth_date">Choose your birth date</string>
+    <string name="choose_age">choose age</string>
+    <string name="date">Date</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="get_age">Get Age</string>
+    <string name="just_enter_the_date_month_year_click_on_get_age"><![CDATA[Just Enter the Date, Month, Year & Click on Get Age]]></string>
+    <string name="your_age_will_display_here">Your Age will display here</string>
+    <string name="enter_year_of_birth">Enter Year Of Birth</string>
+</resources>

@@ -1,0 +1,41 @@
+.coin {
+  margin: 3% 3%;
+}
+.coin-logo {
+  height: 90px;
+  width: 90px;
+}
+.coin-title,
+.coin-symbol,
+.coin-price,
+.coin-marketcap,
+.coin-volume,
+.priceContainerDown,
+.priceContainerUp {
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+.priceContainerUp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 3%;
+    font-size: 1rem;
+    padding: 1rem;
+    background-color: #4EF037;
+}
+
+.priceContainerDown {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    padding: 1rem;
+    background-color: #FF2626;
+}
