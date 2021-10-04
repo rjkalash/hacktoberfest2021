@@ -1,3 +1,9 @@
+"""
+Author : Divya Ganesh
+04 October 2021
+Hacktoberfest 2021
+Cummins College of Engineering for Women Pune
+"""
 import numpy as np
 import time
 import re  
