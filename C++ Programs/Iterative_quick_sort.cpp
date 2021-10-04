@@ -2,14 +2,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 void swap(int* a, int* b)
 {
 	int t = *a;
 	*a = *b;
 	*b = t;
 }
-
 
 int partition(int arr[], int l, int h)
 {
@@ -26,25 +24,18 @@ int partition(int arr[], int l, int h)
 	return (i + 1);
 }
 
-
 void quickSortIterative(int arr[], int l, int h)
 {
-
 	int stack[h - l + 1];
-
-
 	int top = -1;
-
 
 	stack[++top] = l;
 	stack[++top] = h;
-
 
 	while (top >= 0) {
 		// Pop h and l
 		h = stack[top--];
 		l = stack[top--];
-
 
 		int p = partition(arr, l, h);
 
@@ -53,7 +44,6 @@ void quickSortIterative(int arr[], int l, int h)
 			stack[++top] = p - 1;
 		}
 
-
 		if (p + 1 < h) {
 			stack[++top] = p + 1;
 			stack[++top] = h;
@@ -61,14 +51,12 @@ void quickSortIterative(int arr[], int l, int h)
 	}
 }
 
-
 void printArr(int arr[], int n)
 {
 	int i;
 	for (i = 0; i < n; ++i)
 		cout << arr[i] << " ";
 }
-
 // Driver code
 int main()
 {
@@ -80,8 +68,7 @@ int main()
     for(int i=0;i<n;i++){
          cin>>arr[i];
     }
-	quickSortIterative(arr, 0, n - 1);
-	printArr(arr, n);
-	return 0;
+    quickSortIterative(arr, 0, n - 1);
+    printArr(arr, n);
+    return 0;
 }
-
