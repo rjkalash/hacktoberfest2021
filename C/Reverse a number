@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+int n,s,i;
+printf("Enter the number:\n");
+scanf("%d",&n);
+int a=1,b=0;
+if (n==0) printf("%d\n",b);
+else if (n==1) printf("%d\n%d\n",b,a);
+else{
+    printf("%d\n%d\n",b,a);
+    for (i=0;i<n;i++){
+        s=a+b;
+        if (s>n) break;
+        printf("%d\n",s);
+        b=a;
+        a=s;
+}}
+return 0;
+}
