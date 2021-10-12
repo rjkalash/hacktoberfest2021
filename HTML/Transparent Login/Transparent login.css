@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+    /* background: url(https://c4.wallpaperflare.com/wallpaper/657/743/684/light-black-asus-rog-simple-background-clean-1900x1200-technology-asus-hd-art-wallpaper-preview.jpg) no-repeat; */
+    background: url(https://img.freepik.com/free-vector/dark-grey-abstract-background-with-blue-light-line-luxury-modern-technology-futuristic-background_156943-59.jpg?size=626&ext=jpg) no-repeat;
+    background-size: cover;
+}
+.login-box{
+    width: 350px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color:white;
+    /* background: rgba(255, 255, 255, 0.1);  */
+    /* box-shadow: 10px 10px 20px rgb(8, 233, 38),-10px -10px 20px rgb(12, 221, 228) ; */
+    border-radius: 4px;
+}
+.login-box h1{
+    float: left;
+    font-size: 40px;
+    border-bottom: 6px solid rgb(8, 233, 38);
+    margin-bottom: 50px;
+    padding: 13px 0;
+    margin-left: 10px;
+}
+.textbox{
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    font-size: 26px;
+    padding: 8px 0;
+    margin: 8px 6px;
+    border-bottom: 2px solid  rgb(8, 233, 38);
+}
+.textbox i{
+    width: 26px;
+    height: 30px;
+    float: left;
+    margin: 0 10px 0 0;
+    text-align: center;
+    vertical-align: center;
+}
+.textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    color: whitesmoke;
+    font-size: 17.5px;
+    /* width: 80px;
+    float: left;
+    margin: 8px; */
+}
+.textbox input::placeholder{
+    margin-left: 10px;
+}
+.btn{
+    background: none; 
+    color:rgb(8, 233, 38) ;
+    height: 40px;
+    width:30%;
+    font-size: 20px;
+    box-shadow: 2px 2px 6px rgb(8, 233, 38) ;
+    border-radius: 6px;
+    margin-left: 10px;
+    cursor: pointer;
+    /* background-image: linear-gradient(to right,#0EDC23,#03F9AD,#03C7F9); */
+    background-size: 200%;
+}
+.login-box:hover{
+    width: 350px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color:white;
+    /* background: rgba(255, 255, 255, 0.1);  */
+     box-shadow: 10px 10px 20px rgb(8, 233, 38),-10px -10px 20px rgb(12, 221, 228) ; 
+    border-radius: 4px;
+}
+@media screen and max-width(1332px) and min-width(480px){
+    body{
+        background-attachment: fixed;
+        background-size: 200%;
+        background-repeat: no-repeat;
+        height: 743px;
+        background-position: center center;
+    }
+    
+}
