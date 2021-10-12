@@ -1,0 +1,22 @@
+bookid,title,author,publisher,edition,cost,category			
+101.0,Fundamental of analytical chemistry,Douglas A. Skoog,ARP PUBLICATION,2016.0,540.0,Chemistry			
+102.0,Advanced Organic chemistry,Francis A Carey,FRC PUBLICATION,2019.0,850.0,Chemistry			
+103.0,Essential biochemistry,Charlie W Patt,CWP PUBLICATION,2017.0,450.0,Chemistry			
+104.0,New Simplified Physics,S.L.Arora,DHANPAT RAI & CO.,2018.0,900.0,Physics		
+105.0,Fundamental of Physics,KL. GOGIA & KL.GOMBLER,PRADEEP PUBLICATIONS,2019.0,1200.0,Physics			
+106.0,Modern ABC,S.P.JAUHAR,MODERN PUBLISHERS,2019.0,1200.0,Physics			
+107.0,R.D. SHARMA,R.D.SHARMA,DHANPAT RAI & CO.,2019.0,900.0,Maths			
+108.0,Algebra Cengage,Cengage,ARIHANT PUBLISHERS,2018.0,500.0,Maths			
+109.0,R.S.Agarwal,R.S.AGARWAL, ,2019.0,600.0,Maths			
+110.0,S.Chand,SK GUPTA,S.CHAND PUBLICATION,2017.0,900.0,Maths		
+111.0,Modern ABC,S.P. JAUHAR,MODERN PUBLISHER,2019.0,1100.0,Chemistry		
+112.0,Informatics Practises with Python,Preeti Arora,SULTAN CHAND,2019.0,500.0,I.P			
+113.0,Computer Networks,Sharad Kumar Verma,SUN INDIA PUBLISHERS,2018.0,650.0,I.P			
+114.0,Informatics Practises with Python,Sumita Arora,SULTAN CHAND,2019.0,500.0,I.P			
+115.0,Client server computing,Lalit Kumar,SUN INDIA PUBLISHERS,2018.0,450.0,I.P			
+116.0,War&Peace,Tolystoy,THE RUSSIAN MESENGER,2004.0,700.0,Novel			
+117.0,Pride & Prejudice,Jane Austin,T.EGERTOR WHITEHALL,2008.0,430.0,Novel			
+118.0,The History of TOM JONES,Henry Fielding,Andrew Miller,2005.0,400.0,Novel			
+119.0,David Copperfield,Charles Dickens,BRADBURY&EVANS,2011.0,650.0,Novel			
+120.0,A TEXT BOOK PHYSICAL EDUCATION,SANJAY KUNDRA,EVERGREEN PUBLISHERS,2019.0,300.0,P.E
+121.0,Concepts of Physics,H.C.VERMA,Bharati Bhawan,2017.0,300.0,Physics
