@@ -18,7 +18,7 @@ public static void main(String[] args)
         if(mp.containsKey(val) && mp.get(val)!=-1)
         {
             mp.put(val,-1);
-            System.out.println(val);
+            System.out.println(vali);
         }
     }
  }
