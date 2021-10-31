@@ -6,6 +6,8 @@ int main(int argc, char **argv)
 {
     cout<<"Enter the dimensions of the matrix: ";
     int m, n;
+    int c, d;
+    cin>>c>>d;
     cin>>m>>n;
     double mat[m][n];
     int zeros = 0;
