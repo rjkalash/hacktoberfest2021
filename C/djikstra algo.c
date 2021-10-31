@@ -7,11 +7,13 @@ typedef struct MinHeapNode
 {
 	int v;
 	int dist;
+	int distinct;
 } MinHeapNode;
 
 struct MinHeap
 {
-	int size;	
+	int size;
+	int play;
 	int capacity;
 	int *pos;
 	struct MinHeapNode **arr;
@@ -21,6 +23,7 @@ struct AdjListNode
 {
 	int dest;
 	int weight;
+	int height;
 	struct AdjListNode* next;
 };
 
