@@ -3,6 +3,12 @@
 using namespace std;
 
 int m,n;
+int c, d;
+
+int addition(int c,int d)
+{
+	return (c+d);
+}
 
 int add(int **a,int m,int n)
 {
