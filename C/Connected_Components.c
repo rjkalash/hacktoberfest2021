@@ -9,6 +9,7 @@ int stack[MAX_SIZE], top;
 
 struct adjlist_node{
 int dest;
+int test;
 struct adjlist_node *next;
 };
 
@@ -18,6 +19,7 @@ struct adjlist_node *head;
 
 struct Graph{
 int V;
+int C;
 int *visited;
 struct adj_list *arr;
 };
